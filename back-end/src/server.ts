@@ -1,5 +1,13 @@
-import { app } from './app.ts';
+import { createApp } from './app.ts';
+import { SalaryRepositoryMemory } from './repositories/salary.repository.ts';
+import { SalaryService } from './services/salary/salary.service.ts';
 
-app.listen(3000, () => {
-    console.log('Serveur démarré sur http://localhost:3000');
+const salaryRepository = new SalaryRepositoryMemory();
+const salaryService = new SalaryService(salaryRepository);
+const app = createApp({ salaryService });
+
+const port = Number(process.env.PORT) || 3000;
+
+app.listen(port, () => {
+    console.log(`Port ${port}`);
 });
