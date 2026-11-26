@@ -1,4 +1,4 @@
-import type { GrossToNetResult } from "../../../types/types.ts";
+import type { GrossToNetResult } from "../types.ts";
 
 
 export interface SalaryRepository {
