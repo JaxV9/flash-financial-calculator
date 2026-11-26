@@ -1,7 +1,14 @@
-import express, { type Express, type Request, type Response } from 'express';
+import express, { type Express } from 'express';
+import type { SalaryService } from './services/salary/salary.service.ts';
+import { routes } from './routes.ts';
 
-export const app: Express = express();
+export interface AppDependencies {
+    salaryService: SalaryService;
+}
 
-app.get('/', (req: Request, res: Response) => {
-    res.send('Hello World!');
-});
+export const createApp = ({ salaryService }: AppDependencies): Express => {
+    const app: Express = express();
+    app.use(express.json());
+    app.use(routes(salaryService))
+    return app;
+}

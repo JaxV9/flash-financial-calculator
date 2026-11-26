@@ -27,7 +27,7 @@ export class SalaryService {
         const bossCostYear = grossYear * 1.42;
         const bossCostMonth = grossMonth * 1.42;
 
-        return {
+        const result = {
             gross: salary.frequency === 'year' ? grossMonth : grossYear,
             netMonth: netAfterTaxesMonth,
             netYear: netAfterTaxesYear,
@@ -35,7 +35,9 @@ export class SalaryService {
             bossCostYear: bossCostYear
         }
 
+        this.repo.grossToNet(result);
 
+        return result;
     }
 
 }

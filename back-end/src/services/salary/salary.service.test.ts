@@ -1,5 +1,6 @@
 import { beforeEach, describe, expect, it } from "vitest";
 import { SalaryService } from "./salary.service.ts";
+import { SalaryRepositoryMemory } from "../../repositories/salary.repository.ts";
 
 
 describe('SalaryService.create', () => {
@@ -7,7 +8,7 @@ describe('SalaryService.create', () => {
     let service: SalaryService;
 
     beforeEach(() => {
-        service = new SalaryService();
+        service = new SalaryService(new SalaryRepositoryMemory());
     });
 
     it('gross to net for non-executive without PAS', () => {
