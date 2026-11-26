@@ -1,6 +1,6 @@
 import { ValidationError } from "../../app-error.ts";
 import type { SalaryRepository } from "../../repositories/salary.repository.ts";
-import type { GrossToNetResult, Salary } from "../../types.ts";
+import type { GrossToNetResult, Salary } from "../../../../types/types.ts";
 
 export class SalaryService {
     private readonly repo: SalaryRepository;
