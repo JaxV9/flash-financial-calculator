@@ -7,12 +7,11 @@ import { GrosstonetService } from '../../services/grosstonet.service';
 import { Salary } from '../../types';
 
 @Component({
-  selector: 'app-grosstonetform',
-  standalone: true,
-  imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatRadioModule],
-  templateUrl: './grosstonetform.component.html',
-  styleUrl: './grosstonetform.component.css',
-  encapsulation: ViewEncapsulation.ShadowDom
+    selector: 'app-grosstonetform',
+    imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatRadioModule],
+    templateUrl: './grosstonetform.component.html',
+    styleUrl: './grosstonetform.component.css',
+    encapsulation: ViewEncapsulation.ShadowDom
 })
 export class GrosstonetformComponent {
 

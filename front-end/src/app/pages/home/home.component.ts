@@ -3,12 +3,11 @@ import { GrosstonetformComponent } from '../../components/grosstonetform/grossto
 import { GrosstonetresultsComponent } from '../../components/grosstonetresults/grosstonetresults.component';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [GrosstonetformComponent, GrosstonetresultsComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css',
-  encapsulation: ViewEncapsulation.ShadowDom
+    selector: 'app-home',
+    imports: [GrosstonetformComponent, GrosstonetresultsComponent],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.css',
+    encapsulation: ViewEncapsulation.ShadowDom
 })
 export class HomeComponent {
 

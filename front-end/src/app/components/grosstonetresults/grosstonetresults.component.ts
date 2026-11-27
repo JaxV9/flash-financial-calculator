@@ -2,12 +2,11 @@ import { Component, computed, inject, ViewEncapsulation } from '@angular/core';
 import { GrosstonetService } from '../../services/grosstonet.service';
 
 @Component({
-  selector: 'app-grosstonetresults',
-  standalone: true,
-  imports: [],
-  templateUrl: './grosstonetresults.component.html',
-  styleUrl: './grosstonetresults.component.css',
-  encapsulation: ViewEncapsulation.ShadowDom
+    selector: 'app-grosstonetresults',
+    imports: [],
+    templateUrl: './grosstonetresults.component.html',
+    styleUrl: './grosstonetresults.component.css',
+    encapsulation: ViewEncapsulation.ShadowDom
 })
 export class GrosstonetresultsComponent {
   grosstonetService = inject(GrosstonetService)
