@@ -21,6 +21,10 @@ describe('POST /grosstonet', () => {
             gross: 3000,
             netMonth: 2340,
             netYear: 28080,
+            incomeTaxMonth: 125.33,
+            incomeTaxYear: 1503.92,
+            netAfterIncomeTaxMonth: 2214.67,
+            netAfterIncomeTaxYear: 26576.08,
             bossCostMonth: 4260,
             bossCostYear: 51120
         })
@@ -38,6 +42,10 @@ describe('POST /grosstonet', () => {
             gross: 48000,
             netMonth: 2700,
             netYear: 32400,
+            incomeTaxMonth: 235.33,
+            incomeTaxYear: 2823.99,
+            netAfterIncomeTaxMonth: 2764.67,
+            netAfterIncomeTaxYear: 33176.01,
             bossCostMonth: 5680,
             bossCostYear: 68160
         })
@@ -55,6 +63,10 @@ describe('POST /grosstonet', () => {
             gross: 0,
             netMonth: 0,
             netYear: 0,
+            incomeTaxMonth: 0,
+            incomeTaxYear: 0,
+            netAfterIncomeTaxMonth: 0,
+            netAfterIncomeTaxYear: 0,
             bossCostMonth: 0,
             bossCostYear: 0
         })
