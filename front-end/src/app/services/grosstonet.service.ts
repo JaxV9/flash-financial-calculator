@@ -15,6 +15,10 @@ export class GrosstonetService {
     gross: 0,
     netMonth: 0,
     netYear: 0,
+    incomeTaxMonth: 0,
+    incomeTaxYear: 0,
+    netAfterIncomeTaxMonth: 0,
+    netAfterIncomeTaxYear: 0,
     bossCostMonth: 0,
     bossCostYear: 0
   });

@@ -21,6 +21,10 @@
         <label>Taux du prélèvement à la source</label>
         <input class="input-number" formControlName="ratePAS" name="ratePAS" type="number" />
     </div>
+    <div class="form-field-group">
+        <label>Nombre de parts fiscales</label>
+        <input class="input-number" formControlName="taxParts" name="taxParts" type="number" step="0.5" min="1" />
+    </div>
     <button type="submit" translate="no" class="notranslate" [disabled]="isLoading()" [attr.aria-busy]="isLoading()">
         @if (isLoading()) {
             <span class="loader" aria-hidden="true"></span>

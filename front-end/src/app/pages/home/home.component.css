@@ -32,13 +32,13 @@
         align-items: center;
         border-radius: 16px;
         padding: 16px 28px;
-        height: 432px;
+        height: 500px;
         width: min(456px, 90vw);
         box-sizing: border-box;
     }
 
     .result-container {
-        height: 432px;
+        height: 500px;
         width: min(456px, 90vw);
         border-radius: 16px;
         border: #F8633F 2px dashed;

@@ -24,7 +24,8 @@ export class GrosstonetformComponent {
     amount: new FormControl<number>(0, { nonNullable: true }),
     frequency: new FormControl<'year' | 'month'>('year', { nonNullable: true }),
     status: new FormControl<'executive' | 'non-executive'>('non-executive', { nonNullable: true }),
-    ratePAS: new FormControl<number>(0, { nonNullable: true })
+    ratePAS: new FormControl<number>(0, { nonNullable: true }),
+    taxParts: new FormControl<number>(1, { nonNullable: true })
   })
 
   async onSubmit() {
