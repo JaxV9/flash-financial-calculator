@@ -10,11 +10,18 @@ export class GrosstonetService {
 
   httpService = inject(HttpService);
 
-  result = signal<GrossToNetResult | undefined>(undefined);
+  frequency = signal<'year' | 'month' | undefined>(undefined);
+  result = signal<GrossToNetResult>({
+    gross: 0,
+    netMonth: 0,
+    netYear: 0,
+    bossCostMonth: 0,
+    bossCostYear: 0
+  });
 
   async grossToNet(salary: Salary) {
     const result = await firstValueFrom(this.httpService.grossToNet(salary));
-    this.result.set(result)
-    console.log(result)
+    this.frequency.set(salary.frequency);
+    this.result.set(result);
   }
 }

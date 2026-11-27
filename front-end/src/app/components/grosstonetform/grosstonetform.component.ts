@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -11,7 +11,8 @@ import { Salary } from '../../types';
   standalone: true,
   imports: [ReactiveFormsModule, MatFormFieldModule, MatInputModule, MatRadioModule],
   templateUrl: './grosstonetform.component.html',
-  styleUrl: './grosstonetform.component.css'
+  styleUrl: './grosstonetform.component.css',
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class GrosstonetformComponent {
 
