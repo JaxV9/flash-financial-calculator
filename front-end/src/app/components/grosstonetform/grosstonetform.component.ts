@@ -1,4 +1,4 @@
-import { Component, inject, ViewEncapsulation } from '@angular/core';
+import { Component, inject, signal, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -17,7 +17,8 @@ import { Salary } from '../../types';
 export class GrosstonetformComponent {
 
   formBuilder = inject(FormBuilder);
-  grosstonetService = inject(GrosstonetService)
+  grosstonetService = inject(GrosstonetService);
+  isLoading = signal(false);
 
   form = new FormGroup({
     amount: new FormControl<number>(0, { nonNullable: true }),
@@ -26,8 +27,16 @@ export class GrosstonetformComponent {
     ratePAS: new FormControl<number>(0, { nonNullable: true })
   })
 
-  onSubmit() {
-    this.grosstonetService.grossToNet(this.form.value as Salary)
+  async onSubmit() {
+    if (this.isLoading()) {
+      return;
+    }
+    this.isLoading.set(true);
+    try {
+      await this.grosstonetService.grossToNet(this.form.value as Salary);
+    } finally {
+      this.isLoading.set(false);
+    }
   }
 
 }

@@ -21,5 +21,12 @@
         <label>Taux du prélèvement à la source</label>
         <input class="input-number" formControlName="ratePAS" name="ratePAS" type="number" />
     </div>
-    <button type="submit">Valider</button>
+    <button type="submit" translate="no" class="notranslate" [disabled]="isLoading()" [attr.aria-busy]="isLoading()">
+        @if (isLoading()) {
+            <span class="loader" aria-hidden="true"></span>
+            <span>Chargement...</span>
+        } @else {
+            <span>Valider</span>
+        }
+    </button>
 </form>
