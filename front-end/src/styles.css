@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Fix: Angular Material 18 (MDC) - floating label clipped at the top */
+.mat-mdc-text-field-wrapper {
+  overflow: visible !important;
+}
+.mat-mdc-form-field .mdc-floating-label {
+  overflow: visible;
+}

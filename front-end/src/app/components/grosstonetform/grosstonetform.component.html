@@ -1,0 +1,25 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="gross-to-net-form">
+    <div class="form-field-group">
+            <label>Montant brut</label>
+            <input class="input-number" type="number" formControlName="amount" name="amount" />
+    </div>
+    <div class="form-field-group">
+        <h3>Période</h3>
+        <div class="radio-group" role="radiogroup" aria-label="Période">
+            <label><input type="radio" formControlName="frequency" value="month" /> Mois</label>
+            <label><input type="radio" formControlName="frequency" value="year" /> Année</label>
+        </div>
+    </div>
+    <div class="form-field-group">
+        <h3>Statut</h3>
+        <div class="radio-group" role="radiogroup" aria-label="Statut">
+            <label><input type="radio" formControlName="status" value="non-executive" /> Non cadre</label>
+            <label><input type="radio" formControlName="status" value="executive" /> Cadre</label>
+        </div>
+    </div>
+    <div class="form-field-group">
+        <label>Taux du prélèvement à la source</label>
+        <input class="input-number" formControlName="ratePAS" name="ratePAS" type="number" />
+    </div>
+    <button type="submit">Valider</button>
+</form>

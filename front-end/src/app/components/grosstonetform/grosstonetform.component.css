@@ -1,0 +1,59 @@
+:host {
+  width: 400px;
+
+  .input-number {
+    padding: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.291);
+    border-radius: 8px;
+  }
+
+  .gross-to-net-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 24px;
+  }
+
+  .form-field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #fff;
+
+  }
+
+  .form-field-group h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  mat-form-field {
+    width: 100%;
+  }
+
+  .radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    color: rgb(255, 255, 255);
+  }
+
+  label {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+  }
+
+  button {
+    padding: 8px 16px;
+    border-radius: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+    color: #F8633F;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,45 @@
+:host {
+
+    .container {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #eae2e2;
+        gap: 28px;
+    }
+
+    h1 {
+        color: #F8633F;
+    }
+
+    .content-container {
+        width: 100%;
+        min-height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+
+    }
+
+    .form-container {
+        background-color: #F8633F;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 16px;
+        padding: 16px 28px;
+        height: 400px;
+        width: 400px;
+    }
+
+    .result-container {
+        height: 432px;
+        width: 456px;
+        border-radius: 16px;
+        border: #F8633F 2px dashed;
+    }
+}
